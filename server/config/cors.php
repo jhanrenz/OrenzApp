@@ -19,9 +19,9 @@ return [
 
     'allowed_methods' => ['*'],
 
-    'allowed_origins' => ['http://localhost:5173/'],
+    'allowed_origins' => ['http://localhost:5173/', 'http://192.168.43.239:8000/'],
 
-    'allowed_origins_patterns' => ['%localhost%'],
+    'allowed_origins_patterns' => ['%http%'],
 
     'allowed_headers' => ['*'],
 
