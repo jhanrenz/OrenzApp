@@ -31,7 +31,7 @@ class MenuController extends Controller
             });
         };
 
-        $menus = $query->latest()->paginate(12);
+        $menus = $query->latest()->paginate(8);
 
         return response()->json([
             'menus' => $menus

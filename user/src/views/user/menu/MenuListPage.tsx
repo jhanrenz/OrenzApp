@@ -131,19 +131,16 @@ export default function MenuListPage() {
       >
         {/* Image */}
         <div className="h-60 w-full bg-gray-100">
-          {menu.image ? (
-            <img
-              src={`${import.meta.env.VITE_API_URL.replace(
-                "/api",
-                ""
-              )}/storage/${menu.image}`}
-              className="w-full h-full object-cover"
-            />
-          ) : (
-            <div className="flex items-center justify-center h-full text-gray-400">
-              No Image
-            </div>
-          )}
+          {menu.image && menu.image.trim() !== "" ? (
+  <img
+    src={`${import.meta.env.VITE_STORAGE_URL}/storage/${menu.image}`}
+    className="w-full h-full object-cover"
+  />
+) : (
+  <div className="flex items-center justify-center h-full text-gray-400">
+    No Image
+  </div>
+)}
         </div>
 
         {/* Content */}
